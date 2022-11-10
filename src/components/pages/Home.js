@@ -3,7 +3,7 @@ import React from 'react';
 import Feed from '../Feed';
 import Article from '../Article';
 
-export default function Home() {
+export default function Home(props) {
     return (
         //use a .map here on props.articles.map (article => ...) to create a <Article /> for each article in the ArticlesObjs
         <h3>Home Test</h3>

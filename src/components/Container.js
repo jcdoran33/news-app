@@ -21,13 +21,13 @@ export default function Container() {
 
     const renderPage = () => {
         if (currentPage === 'Home') {
-            return <Home />;
+            return <Home articles={articlesArrObj}/>;
         }
         else if (currentPage === 'About') {
             return <About />;
         }
         else {
-            return <Home />;
+            return <Home articles={articlesArrObj}/>;
         }
     };
 
@@ -41,7 +41,7 @@ export default function Container() {
             {renderPage()}
 
             <Footer />
-            
+
         </div>
     );
 };

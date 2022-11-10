@@ -6,6 +6,10 @@ import Article from '../Article';
 export default function Home(props) {
     return (
         //use a .map here on props.articles.map (article => ...) to create a <Article /> for each article in the ArticlesObjs
-        <h3>Home Test. This is the Home Page.</h3>
+        <div className="container">
+            <h3 className="text-center">This is the Home Page.</h3>
+
+            <Feed articles={props}/>
+        </div>
     );
 };

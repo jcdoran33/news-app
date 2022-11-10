@@ -4,7 +4,12 @@ import React from 'react';
 
 function About() {
     return(
-        <h3>This is the About Page.</h3>
+        <div className="container">
+        <h3 className="text-center">This is the About Page.</h3>
+        <p>
+            Thank you for visting our news app.
+        </p>
+        </div>
     );
 };
 

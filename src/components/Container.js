@@ -16,6 +16,9 @@ const articlesArrObj = [
 
 ];
 
+//deinfe the function that will call API, and then store/append the article info to the articlesArrObj above
+
+
 export default function Container() {
     const [currentPage, setCurrentPage] = useState('Home'); //use this if creating multiple page site, to switch between pages
 

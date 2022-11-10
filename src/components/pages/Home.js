@@ -9,7 +9,7 @@ export default function Home(props) {
         <div className="container">
             <h3 className="text-center">This is the Home Page.</h3>
 
-            <Feed articles={props}/>
+            <Feed articles={props.articles}/>
         </div>
     );
 };

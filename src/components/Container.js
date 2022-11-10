@@ -34,16 +34,17 @@ function newsFetch () {
             for (let i=0; i < 2; i++){
                 //save as a let variable the Title, Image, Description, and Hyperlink
                 let articleTitle = data.articles[i].title;
-                console.log("articleTitle test: ", articleTitle);
+                // console.log("articleTitle test: ", articleTitle);
                 let articleImg = data.articles[i].urlToImage;
-                console.log("articleImg test: ", articleImg);
+                // console.log("articleImg test: ", articleImg);
                 let articleDesc = data.articles[i].description;
-                console.log("articleDesc test: ", articleDesc);
+                // console.log("articleDesc test: ", articleDesc);
                 let articleLink = data.articles[i].url;
-                console.log("articleLink test: ", articleLink);
+                // console.log("articleLink test: ", articleLink);
 
                 //then create an object containing all just-defined data
                 let apiObject = {
+                    key: i,
                     title: articleTitle,
                     img: articleImg,
                     desc: articleDesc,

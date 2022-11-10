@@ -13,7 +13,7 @@ import Header from './Header';
 
 
 //define constants - URL
-const apiKey = 123;
+const apiKey = '';
 let searchQuery;
 
 //house logic pertaining to creating an array of object of news stories once looped - API call
@@ -31,14 +31,34 @@ function newsFetch () {
         .then(function(data) {
             console.log(data);
             //save required data from each loop
-            for (let i=0; i < 15; i++){
+            for (let i=0; i < 2; i++){
                 //save as a let variable the Title, Image, Description, and Hyperlink
                 let articleTitle = data.articles[i].title;
-                articlesArrObj.push(); //then push data to array as an Object
+                console.log("articleTitle test: ", articleTitle);
+                let articleImg = data.articles[i].urlToImage;
+                console.log("articleImg test: ", articleImg);
+                let articleDesc = data.articles[i].description;
+                console.log("articleDesc test: ", articleDesc);
+                let articleLink = data.articles[i].url;
+                console.log("articleLink test: ", articleLink);
+
+                //then create an object containing all just-defined data
+                let apiObject = {
+                    title: articleTitle,
+                    img: articleImg,
+                    desc: articleDesc,
+                    link: articleLink
+                };
+
+                articlesArrObj.push(apiObject); //then push data to array as an Object
             };
-            
-        })
+            console.log("TEST - articlesArrObj: ", articlesArrObj);
+        });
+    
 };
+
+// call newsFetch upon loading the page...
+newsFetch();
 
 export default function Container() {
     const [currentPage, setCurrentPage] = useState('Home'); //use this if creating multiple page site, to switch between pages

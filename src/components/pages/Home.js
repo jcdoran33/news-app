@@ -9,7 +9,7 @@ export default function Home(props) {
         <div className="container">
             <h3 className="text-center">XYZ News Feed</h3>
 
-            <Feed articles={props.articles}/>
+            <Feed articles={props.articles} />
         </div>
     );
 };

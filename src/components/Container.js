@@ -31,7 +31,7 @@ function newsFetch () {
         .then(function(data) {
             console.log(data);
             //save required data from each loop
-            for (let i=0; i < 2; i++){
+            for (let i=0; i < 15; i++){
                 //save as a let variable the Title, Image, Description, and Hyperlink
                 let articleTitle = data.articles[i].title;
                 // console.log("articleTitle test: ", articleTitle);
@@ -62,7 +62,7 @@ function newsFetch () {
 newsFetch();
 
 export default function Container() {
-    const [currentPage, setCurrentPage] = useState('Home'); //use this if creating multiple page site, to switch between pages
+    const [currentPage, setCurrentPage] = useState('About'); //use this if creating multiple page site, to switch between pages
     
     const renderPage = () => {
         // if (currentPage === 'Home') {
@@ -74,10 +74,12 @@ export default function Container() {
         // else {
         //     return <Home articles={articlesArrObj}/>;
         // }
+        console.log("TEST - renderPage function launched!");
+
         if (currentPage === 'About') {
             return <About />
         } else {
-            return <Home articles={articlesArrObj}/>;
+            return <Home articles={articlesArrObj} change={handlePageChange}/>;
         }
     };
 

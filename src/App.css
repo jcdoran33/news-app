@@ -1,5 +1,5 @@
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 0; /* fix to bottom */
     width: 100%; /*make width span whole page */
     height: 60px; /* adjust footer height */
@@ -10,3 +10,7 @@ footer {
 ul>li {
     list-style-type: none;
 };
+
+body {
+    background-color: grey !important;
+}

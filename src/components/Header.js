@@ -4,7 +4,7 @@ export default function Header({ currentPage, handlePageChange }) {
     return (
         <div className="row">
             <div className="col-md-8">
-                <ul className="nav nav-tabs bg-light">
+                <ul className="nav nav-tabs bg">
                     <li className="nav-item">
                         <a href="#home"
                             onClick={() => handlePageChange('Home')}

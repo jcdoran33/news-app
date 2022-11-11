@@ -9,16 +9,16 @@ function Feed(props) {
 
             {props.articles.map((article, index) => (
                 
-                <li key={index}>
-                    <div className="card">
+                // <li key={index}>
+                    <div className="card m-2">
                         <h5 className="article-title">{props.articles[index].title}</h5>
                         <img className="article-img" src={props.articles[index].img} />
                         <p className="article-description">{props.articles[index].desc}</p>
                         <a className="article-link" href={props.articles[index].link}>Link to Full Article</a>
                     </div>
-                    {console.log("TEST - index: ", index)}
-                    {/* <Article articles={props.articles} key={index}/>  */}
-                </li>
+                 
+
+                // </li>
                 
 
             ))}

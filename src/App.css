@@ -5,3 +5,8 @@ footer {
     height: 60px; /* adjust footer height */
     
 };
+
+/* remove bullet point from li's */
+ul>li {
+    list-style: none;
+};

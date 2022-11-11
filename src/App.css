@@ -4,13 +4,23 @@ footer {
     width: 100%; /*make width span whole page */
     height: 60px; /* adjust footer height */
     
-};
+}
 
 /* remove bullet point from li's */
 ul>li {
     list-style-type: none;
-};
+}
 
 body {
-    background-color: grey !important;
+    background-color: lightgray;
+}
+
+/* universal styling, root element */
+#root {
+    background-color: lightgray;
+}
+
+/* hover effects for cards/articles */
+.card:hover {
+    border: 2px solid black;
 }

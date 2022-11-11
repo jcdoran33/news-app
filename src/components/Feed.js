@@ -10,7 +10,7 @@ function Feed(props) {
             {props.articles.map((article, index) => (
                 
                 // <li key={index}>
-                    <div className="card m-2">
+                    <div className="card m-2 p-1">
                         <h5 className="article-title">{props.articles[index].title}</h5>
                         <img className="article-img" src={props.articles[index].img} />
                         <p className="article-description">{props.articles[index].desc}</p>

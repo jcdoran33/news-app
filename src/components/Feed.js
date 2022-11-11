@@ -5,9 +5,10 @@ import Article from './Article';
 function Feed(props) {
     return (
         <div className="container">
-            <h5>Feed test text.</h5>
+            <h5 className="text-center">News Feed Title</h5>
 
             {props.articles.map((article, index) => (
+                
                 <li key={index}>
                     <div className="card">
                         <h5 className="article-title">{props.articles[index].title}</h5>
@@ -18,6 +19,7 @@ function Feed(props) {
                     {console.log("TEST - index: ", index)}
                     {/* <Article articles={props.articles} key={index}/>  */}
                 </li>
+                
 
             ))}
 

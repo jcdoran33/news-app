@@ -63,21 +63,26 @@ newsFetch();
 
 export default function Container() {
     const [currentPage, setCurrentPage] = useState('Home'); //use this if creating multiple page site, to switch between pages
-
+    
     const renderPage = () => {
-        if (currentPage === 'Home') {
-            return <Home articles={articlesArrObj}/>;
-        }
-        else if (currentPage === 'About') {
-            return <About />;
-        }
-        else {
+        // if (currentPage === 'Home') {
+        //     return <Home articles={articlesArrObj}/>;
+        // }
+        // else if (currentPage === 'About') {
+        //     return <About />;
+        // }
+        // else {
+        //     return <Home articles={articlesArrObj}/>;
+        // }
+        if (currentPage === 'About') {
+            return <About />
+        } else {
             return <Home articles={articlesArrObj}/>;
         }
     };
 
     const handlePageChange = (page) => setCurrentPage(page);
-
+    
     return (
         <div>
             <Header currentPage={currentPage} handlePageChange={handlePageChange}/>

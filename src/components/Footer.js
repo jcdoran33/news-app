@@ -4,7 +4,7 @@ function Footer() {
     return (
         <footer className="footer bg-light">
             <div className="container text-center">
-                <h4>~News App~</h4>
+                <h4>~XYZ News App~</h4>
             </div>
         </footer>
     );

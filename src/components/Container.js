@@ -13,7 +13,8 @@ import Header from './Header';
 
 
 //define constants - for URL
-const apiKey = process.env.REACT_APP_API_KEY;
+// const apiKey = process.env.REACT_APP_API_KEY; //retreiving env variables not working on GH pages
+const apiKey = 'd33901c470614752bc602ebd91c7ff10';
 let searchQuery; //to be redefined later with search field .value
 
 //house an array of object of news stories once looped - API call

@@ -13,7 +13,7 @@ import Header from './Header';
 
 
 //define constants - for URL
-const apiKey = '';
+const apiKey = process.env.REACT_APP_API_KEY;
 let searchQuery; //to be redefined later with search field .value
 
 //house an array of object of news stories once looped - API call

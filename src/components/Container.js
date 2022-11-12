@@ -16,7 +16,7 @@ import Header from './Header';
 const apiKey = '';
 let searchQuery;
 
-//house logic pertaining to creating an array of object of news stories once looped - API call
+//house an array of object of news stories once looped - API call
 const articlesArrObj = [
 
 ];

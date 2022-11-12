@@ -23,15 +23,15 @@ function Feed(props) {
         <div className="container">
             <h5 className="text-center">Global News Feed Aggregation</h5>
 
-            {/* area for search bar here */}
-            <label className="text-center" for="searchbar">Search for news:</label><br></br>
+            {/* search bar area here */}
+            <label className="text-center" htmlFor="searchbar">Search for news:</label><br></br>
             <input className="text-center" placeholder="Search for news..." type="text" id="searchbar" name="searchbar" required minLength="4" maxLength="35"></input>
             <button id="search-button" className="text-center">Search</button>
 
             {/* map through the articles array of objects and create a card displaying each one */}
             {props.articles.map((article, index) => (
                 
-                    <div className="card m-2 p-1">
+                    <div className="card m-2 p-2">
                         <h5 className="article-title card-title">{props.articles[index].title}</h5>
                         <img className="article-img" src={props.articles[index].img} />
                         <p className="article-description">{props.articles[index].desc}</p>

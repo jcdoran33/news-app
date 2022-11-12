@@ -12,35 +12,29 @@ import Footer from './Footer';
 import Header from './Header';
 
 
-//define constants - URL
+//define constants - for URL
 const apiKey = '';
-let searchQuery;
+let searchQuery; //to be redefined later with search field .value
 
 //house an array of object of news stories once looped - API call
-const articlesArrObj = [
-
-];
+const articlesArrObj = [];
 
 //deinfe the function that will call API, and then store/append the article info to the articlesArrObj above
-function newsFetch () {
-    var apiURL = 'https://newsapi.org/v2/everything?q='+searchQuery+'&apiKey='+apiKey
+function newsFetch() {
+    var apiURL = 'https://newsapi.org/v2/everything?q=' + searchQuery + '&apiKey=' + apiKey
     fetch(apiURL)
-        .then(function(res) {
+        .then(function (res) {
             return res.json();
         })
-        .then(function(data) {
+        .then(function (data) {
             console.log(data);
             //save required data from each loop
-            for (let i=0; i < 15; i++){
+            for (let i = 0; i < 15; i++) {
                 //save as a let variable the Title, Image, Description, and Hyperlink
                 let articleTitle = data.articles[i].title;
-                // console.log("articleTitle test: ", articleTitle);
                 let articleImg = data.articles[i].urlToImage;
-                // console.log("articleImg test: ", articleImg);
                 let articleDesc = data.articles[i].description;
-                // console.log("articleDesc test: ", articleDesc);
                 let articleLink = data.articles[i].url;
-                // console.log("articleLink test: ", articleLink);
 
                 //then create an object containing all just-defined data
                 let apiObject = {
@@ -53,9 +47,9 @@ function newsFetch () {
 
                 articlesArrObj.push(apiObject); //then push data to array as an Object
             };
-            console.log("TEST - articlesArrObj: ", articlesArrObj);
+            // console.log("TEST - articlesArrObj: ", articlesArrObj);
         });
-    
+
 };
 
 // call newsFetch upon loading the page...
@@ -63,31 +57,21 @@ newsFetch();
 
 export default function Container() {
     const [currentPage, setCurrentPage] = useState('About'); //use this if creating multiple page site, to switch between pages
-    
-    const renderPage = () => {
-        // if (currentPage === 'Home') {
-        //     return <Home articles={articlesArrObj}/>;
-        // }
-        // else if (currentPage === 'About') {
-        //     return <About />;
-        // }
-        // else {
-        //     return <Home articles={articlesArrObj}/>;
-        // }
-        console.log("TEST - renderPage function launched!");
 
+    const renderPage = () => {
+        // console.log("TEST - renderPage function launched!");
         if (currentPage === 'About') {
             return <About />
         } else {
-            return <Home articles={articlesArrObj} change={handlePageChange}/>;
+            return <Home articles={articlesArrObj} change={handlePageChange} />;
         }
     };
 
     const handlePageChange = (page) => setCurrentPage(page);
-    
+
     return (
         <div>
-            <Header currentPage={currentPage} handlePageChange={handlePageChange}/>
+            <Header currentPage={currentPage} handlePageChange={handlePageChange} />
 
             {/* <Home articles = {articlesArrObj}/> */}
             {renderPage()}

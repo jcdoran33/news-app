@@ -15,17 +15,14 @@ export default function Header({ currentPage, handlePageChange }) {
                     </li>
                     <li className="nav-item">
                         <a href="#about"
-                        onClick={() => handlePageChange('About')}
-                        className={currentPage === 'About' ? 'nav-link active' : 'nav-link text-dark'}
+                            onClick={() => handlePageChange('About')}
+                            className={currentPage === 'About' ? 'nav-link active' : 'nav-link text-dark'}
                         >
                             About
                         </a>
                     </li>
-
                 </ul>
-
             </div>
-
         </div>
     );
 };
